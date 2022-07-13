@@ -92,3 +92,8 @@ function optionChanged(selectedID){
     }
   },
  
+  layout1 = {
+    title: '<b>Bubble Chart For Each Sample</b>',
+    xaxis: {title: 'OTU ID'},
+    yaxis: {title: 'Number of Samples Collected'},
+    showlegend: false,
