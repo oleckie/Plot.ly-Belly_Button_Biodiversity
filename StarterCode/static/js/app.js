@@ -33,3 +33,17 @@ function optionChanged(selectedID){
           // console.log(item);
           panelDisplay.append("p").text(`${item[0]}: ${item[1]}`)
        });
+ 
+    //CHART
+ 
+    // Filter sample array data for the selected ID
+    const idSample = data.samples.filter(item => parseInt(item.id) == selectedID); 
+    
+    // Slice top 10 sample values
+    var sampleValue = idSample[0].sample_values.slice(0,10);
+    sampleValue= sampleValue.reverse();
+    var otuID = idSample[0].otu_ids.slice(0,10);
+    otuID = otuID.reverse();
+    var otuLabels = idSample[0].otu_labels
+    otuLabels = otuLabels.reverse();
+ 
