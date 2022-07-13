@@ -47,3 +47,30 @@ function optionChanged(selectedID){
     var otuLabels = idSample[0].otu_labels
     otuLabels = otuLabels.reverse();
  
+    // Y axis of bar chart
+    const yAxis = otuID.map(item => 'OTU' + " " + item);
+       // console.log(yAxis);
+    
+    // Define the layout and trace object, edit color and orientation
+       const trace = {
+       y: yAxis,
+       x: sampleValue,
+       type: 'bar',
+       orientation: "h",
+       text:  otuLabels,
+       marker: {
+          color: 'rgb(154, 140, 152)',
+          line: {
+             width: 3
+         }
+        }
+       },
+       layout = {
+       title: 'Top 10 Operational Taxonomic Units (OTU)/Individual',
+       xaxis: {title: 'Number of Samples Collected'},
+       yaxis: {title: 'OTU ID'}
+       };
+ 
+       // Plot using Plotly
+       Plotly.newPlot('bar', [trace], layout,  {responsive: true});    
+       
