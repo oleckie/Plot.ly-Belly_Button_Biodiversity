@@ -74,3 +74,21 @@ function optionChanged(selectedID){
        // Plot using Plotly
        Plotly.newPlot('bar', [trace], layout,  {responsive: true});    
        
+ // BUBBLE CHART
+ 
+ // Remove Sample value and otuID from individual
+ var sampleValue1 =idSample[0].sample_values;
+ var otuID1= idSample[0].otu_ids;
+ 
+ // Define the layout and trace object, edit color and orientation
+ const trace1 = {
+    x: otuID1,
+    y: sampleValue1,
+    mode: 'markers',
+    marker: {
+      color: otuID1,
+      
+      size: sampleValue1
+    }
+  },
+ 
