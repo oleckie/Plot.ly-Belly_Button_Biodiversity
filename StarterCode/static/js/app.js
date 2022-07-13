@@ -101,4 +101,6 @@ function optionChanged(selectedID){
     width: 1700
     };
     
+ // Plot using Plotly
+ Plotly.newPlot('bubble', [trace1], layout1);
  
