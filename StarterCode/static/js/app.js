@@ -97,3 +97,8 @@ function optionChanged(selectedID){
     xaxis: {title: 'OTU ID'},
     yaxis: {title: 'Number of Samples Collected'},
     showlegend: false,
+    height: 700,
+    width: 1700
+    };
+    
+ 
